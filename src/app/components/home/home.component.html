@@ -1,0 +1,45 @@
+<div class="home home__container">
+    <div class="home featured-product">
+        @if(featuredProduct) {
+            <app-hero-banner [data]="featuredProduct"></app-hero-banner>
+        }
+    </div>
+
+    <div class="container home__products-container">
+        @for (category of categorizedProductMap; track $index) {
+            <h3 class="home__category-label">{{category[0]}}</h3>
+            <div class="d-flex home__category-wrapper">
+                @for (product of category[1]; track $index) {
+                    <!-- <div class="col-sm-12 col-md-2 col-lg-3"> -->
+                    <div class="col-sm-12 col-lg-3">
+                        <app-product-card [data]="product"></app-product-card>
+                    </div>
+                } @empty {
+                    <h3>No products in the {{category[0]}} category.</h3>
+                }
+            </div>
+        } @empty {
+            <h2> No Available products</h2>
+        }
+    </div>
+</div>
+
+<dialog class="cart-dialog" id="cartDetailsDialog">
+    <div class="cart-dialog__container">
+        @for(product of cartProducts; track $index) {
+            <h2> Your Cart. </h2>
+            <div class="cart-dialog__product-wrapper d-flex">
+                <img src="{{product.image}}">
+                <!-- <p class="cart-dialog__product-title">{{truncateText(product.title, 50)}}</p> -->
+                <p class="cart-dialog__product-title">{{product.title}}</p>
+                <p class="cart-dialog__product-price">{{product.price | currency: 'R'}}</p>
+            </div>
+        } @empty {
+            <h2 class="mb-3"> No products added to cart. </h2>
+        }
+
+        <div class="cart-dialog__action-wrapper">
+            <app-button [data]="{'label': 'Close', 'type': 'secondary'}" (clicked)="closeDialog()"></app-button>
+        </div>
+    </div>
+</dialog>

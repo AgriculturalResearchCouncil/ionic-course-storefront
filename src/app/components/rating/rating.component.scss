@@ -1,0 +1,15 @@
+@import '../../../assets/styles/variables';
+
+.rating {
+    &__container {
+        img {
+            padding-bottom: 5px;
+            width: 20px;
+        }
+    }
+
+    &__rating {
+        font-size: $font-xs;
+        padding-left: 5px;
+    }
+}

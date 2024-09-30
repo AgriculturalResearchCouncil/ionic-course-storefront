@@ -1,0 +1,41 @@
+
+$primary: #ff772a;
+$secondary: #141414;
+$tertiary: #D0D3D8;
+$white: #ffffff;
+
+$black: #000000;
+$lightgrey: #F5F5F5;
+$grey: #191919;
+
+$font-xs: 12px;
+$font-14: 14px;
+$font-20: 20px;
+$font-24: 24px;
+$font-36: 36px;
+$font-40: 40px;
+$font-sm: 16px;
+$font-md: 24px;
+$font-lg: 56px;
+$font-xl: 72px;
+$font-xxl: 114px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+
+$line-height: 1.8;
+
+$primary-gradiunt: linear-gradient(90deg, #604C33 6.11%, rgba(166, 93, 2, 0.65) 85.69%);
+
+$shadow-base: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+
+$border-radius: 5px;

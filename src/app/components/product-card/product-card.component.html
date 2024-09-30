@@ -1,0 +1,23 @@
+<div class="product-card product-card__container">
+    <div class="product-card__image-wrapper d-flex align-items-center">
+        <img src="{{data?.image}}" alt="">
+    </div>
+
+    <div class="product-card__content-container d-flex flex-column justify-content-center">
+        <div class="product-card__title">
+            {{data?.title}}
+        </div>
+        
+        <div class="product-card__price">
+            {{data?.price | currency: 'R'}}
+        </div>
+        
+        <div class="product-card__rating">
+            <app-rating [data]="data?.rating"></app-rating>
+        </div>
+
+        <div class="product-card__button-wrapper">
+            <app-button [data]="{label: 'Add to Cart'}" (clicked)="addToCart(data)"></app-button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="hero-banner__container d-flex">
+    <div class="hero-banner__background-image"></div>
+    <div class="hero-banner__wrapper d-flex">
+        <div class="hero-banner__content-wrapper d-flex flex-column w-50">
+            <h1 class="hero-banner__title">{{data?.title}}</h1>
+            <h5 class="hero-banner__subtitle">{{data?.description}}</h5>
+            <div class="hero-banner__pricing-wrapper">
+                <p class="hero-banner__price">{{data?.price | currency: 'R'}}</p>
+            </div>
+            <app-rating [data]="data?.rating"></app-rating>
+            <div class="hero-banner__button-wrapper">
+                <app-button [data]="{label: 'Add to Cart'}" (clicked)="addToCart(data)"></app-button>
+            </div>
+        </div>
+        <div class="hero-banner__image">
+            <img src="{{data?.image}}"/>
+        </div>
+    </div>
+</div>

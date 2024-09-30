@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header__logo">
+    <!-- <img src="assets/logo.png" alt="Store Logo"> -->
+    🕋︎
+  </div>
+  <nav class="header__nav">
+    <ul>
+      <li><a class="header__icon header__icon--search" aria-disabled="true"></a></li>
+      <li><a class="header__icon header__icon--profile" aria-disabled="true"></a></li>
+      <li><span class="header__icon header__icon--cart" (click)="showCart()">
+        @if (cartCount) {
+            <span class="header__icon-label">{{cartCount}}</span>
+        }
+      </span></li>
+      <li><a class="header__icon header__icon--logout" aria-disabled="true"></a></li>
+    </ul>
+  </nav>
+</header>

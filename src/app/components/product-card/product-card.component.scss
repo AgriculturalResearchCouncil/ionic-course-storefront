@@ -1,0 +1,43 @@
+@import '../../../assets/styles/variables';
+
+.product-card {
+    height: 450px;
+
+    &__container {
+        border-radius: $border-radius;
+        box-shadow: $shadow-base;
+        margin: 0 30px 30px;
+    }
+
+    &__image-wrapper {
+        max-height: 200px;
+        height: 100%;
+        padding: 50px;
+
+        img {
+            margin: 0 auto;
+            max-width: 100px;
+            width: 100%;
+        }
+    }
+
+    &__content-container {
+        height: 250px;
+        padding: 15px;
+    }
+
+    &__title, &__price {
+        margin-bottom: 10px
+    }
+
+    &__button-wrapper {
+        align-items: end;
+        display: flex;
+        height: 140px;
+        flex: 1;
+    }
+
+    &__title {
+        font-size: $font-xs;
+    }
+}

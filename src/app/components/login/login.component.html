@@ -1,0 +1,26 @@
+<div class="container d-flex justify-content-center align-items-center vh-100 login__container">
+  <div class="card w-50">
+    <div class="card-body">
+      <form class="">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label" name="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+        </div>
+        <app-button [data]="{label: 'Login'}" (clicked)="login()"></app-button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<dialog class="cart-dialog" id="cartDetailsDialog">
+  <div class="cart-dialog__container">
+    <h3>{{error}}</h3>
+    <div class="cart-dialog__action-wrapper">
+        <app-button [data]="{'label': 'Close', 'type': 'secondary'}" (clicked)="closeDialog()"></app-button>
+    </div>
+  </div>
+</dialog>

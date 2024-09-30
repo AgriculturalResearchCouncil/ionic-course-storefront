@@ -1,0 +1,7 @@
+{
+  "name": "storeFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

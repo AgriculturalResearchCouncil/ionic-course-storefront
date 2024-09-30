@@ -1,0 +1,78 @@
+@import '../../../assets/styles/variables';
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+.hero-banner {
+    &__container {
+        border-bottom: 1px solid $lightgrey;
+        height: 70vh;
+        position: relative;
+    }
+
+    &__title {
+        font-size: $font-40;
+        line-height: 1.2;
+
+        @include media-breakpoint-down(md) {
+            font-size: $font-24;
+            padding-top: 70px;
+        }
+    }
+
+    &__subtitle {
+        font-size: $font-sm;
+
+        @include media-breakpoint-down(md) {
+            font-size: $font-xs;
+        }
+    }
+
+    &__background-image {
+        background-image: url(../../../assets/images/bg-3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        opacity: .05;
+        transform: rotateZ(180deg);
+        width: 100%;
+    }
+
+    &__wrapper {
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    &__image {
+        img {
+            width: 250px;
+
+            @include media-breakpoint-down(md) {
+                width: 100px;
+            }
+        }
+    }
+
+    &__product-rating-wrapper {
+        img {
+            padding-bottom: 5px;
+            width: 20px;
+        }
+    }
+
+    &__product-rating {
+        font-size: $font-xs;
+        padding-left: 5px;
+    }
+
+    &__price {
+        font-size: $font-24;
+        font-weight: 500;
+        margin: 20px 0 5px;
+    }
+
+    &__button-wrapper {
+        margin-top: 15px;
+    }
+}
